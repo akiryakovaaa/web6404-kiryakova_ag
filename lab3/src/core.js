@@ -34,11 +34,9 @@ function sumTo(n) {
  * @param {*} n
  */
 function recSumTo(n) {
-    if (n === 1) {
-        return 1;
-    } else {
-        return n + recSumTo(n - 1);
-    }
+    if (n < 1) return undefined; 
+    if (n === 1) return 1;       
+    return n + recSumTo(n - 1);
 }
 
 /**
@@ -46,6 +44,7 @@ function recSumTo(n) {
  * @param {*} n
  */
 function factorial(n) {
+    if (n < 0) return undefined;
     if (n <= 1) return 1;
     return n * factorial(n - 1);
 }
@@ -66,6 +65,7 @@ function isBinary(n) {
  * @param {*} n
  */
 function fibonacci(n) {
+    if (n <= 0) return undefined
     if (n <= 2) return 1;
     let a = 1;
     let b = 1;
